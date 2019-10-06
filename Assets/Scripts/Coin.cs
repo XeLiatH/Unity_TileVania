@@ -9,8 +9,13 @@ public class Coin : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        AudioSource.PlayClipAtPoint(soundSFX, Camera.main.transform.position);
+        if (other.GetType() != typeof(CapsuleCollider2D))
+        {
+            return;
+        }
+
         FindObjectOfType<GameSession>().AddToScore(points);
+        AudioSource.PlayClipAtPoint(soundSFX, Camera.main.transform.position);
         Destroy(gameObject);
     }
 }

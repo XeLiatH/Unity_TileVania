@@ -8,16 +8,16 @@ using UnityEngine.SceneManagement;
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
+    [SerializeField] int score = 0;
     [SerializeField] Text livesText;
     [SerializeField] Text scoreText;
-
-    int score = 0;
 
     void Awake()
     {
         int numberOfGameSessions = FindObjectsOfType<GameSession>().Length;
         if (numberOfGameSessions > 1)
         {
+            gameObject.SetActive(false);
             Destroy(gameObject);
         }
         else
@@ -44,16 +44,23 @@ public class GameSession : MonoBehaviour
         }
     }
 
-    public void AddToScore(int score)
+    public void AddToScore(int scoreToAdd)
     {
-        this.score += score;
+        score += scoreToAdd;
         scoreText.text = score.ToString();
     }
 
     private void ResetGameSession()
     {
-        SceneManager.LoadScene(0);
+        ScenePersist sp = FindObjectOfType<ScenePersist>();
+        if (sp != null)
+        {
+            sp.gameObject.SetActive(false);
+            Destroy(sp.gameObject);
+        }
+
         Destroy(gameObject);
+        SceneManager.LoadScene(0);
     }
 
     private void TakeLife()

@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class LevelExit : MonoBehaviour
 {
     [SerializeField] float levelLoadDelay = 2f;
-    [SerializeField] float levelSlomoFactor = 0.2f;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -15,9 +14,14 @@ public class LevelExit : MonoBehaviour
 
     IEnumerator LoadNextScene()
     {
-        Time.timeScale = levelSlomoFactor;
         yield return new WaitForSeconds(levelLoadDelay);
-        Time.timeScale = 1f;
+        ScenePersist sp = FindObjectOfType<ScenePersist>();
+        if (sp != null)
+        {
+            sp.gameObject.SetActive(false);
+            Destroy(sp.gameObject);
+        }
+
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
