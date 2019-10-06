@@ -2489,6 +2489,12 @@ CompositeCollider2D:
       - {x: -2.7187443, y: -2}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.000005
+--- !u!95 &1273657449 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3007077376988313015, guid: 790dcac20bf53644bbefc4b17604bb97,
+    type: 3}
+  m_PrefabInstance: {fileID: 3007077378144472528}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1273657450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3007077376988313014, guid: 790dcac20bf53644bbefc4b17604bb97,
@@ -7254,6 +7260,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2731465775024825896, guid: 0974492558630604ab654bfa48494f97,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731465775024825896, guid: 0974492558630604ab654bfa48494f97,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731465775024825896, guid: 0974492558630604ab654bfa48494f97,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731465775024826071, guid: 0974492558630604ab654bfa48494f97,
+        type: 3}
+      propertyPath: orthographic size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731465776918108061, guid: 0974492558630604ab654bfa48494f97,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2731465776918108063, guid: 0974492558630604ab654bfa48494f97,
         type: 3}
       propertyPath: m_Follow
@@ -7261,6 +7292,36 @@ PrefabInstance:
       objectReference: {fileID: 1273657450}
     - target: {fileID: 2731465776918108048, guid: 0974492558630604ab654bfa48494f97,
         type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 2146766119}
+    - target: {fileID: 2815104655286084889, guid: 0974492558630604ab654bfa48494f97,
+        type: 3}
+      propertyPath: m_ChildCameras.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2815104655286084889, guid: 0974492558630604ab654bfa48494f97,
+        type: 3}
+      propertyPath: m_AnimatedTarget
+      value: 
+      objectReference: {fileID: 1273657449}
+    - target: {fileID: 2118724085, guid: 0974492558630604ab654bfa48494f97, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 1273657450}
+    - target: {fileID: 2118724084, guid: 0974492558630604ab654bfa48494f97, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 2146766119}
+    - target: {fileID: 624291206, guid: 0974492558630604ab654bfa48494f97, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 624291209, guid: 0974492558630604ab654bfa48494f97, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 1273657450}
+    - target: {fileID: 624291208, guid: 0974492558630604ab654bfa48494f97, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 2146766119}
