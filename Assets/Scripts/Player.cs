@@ -5,7 +5,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float runSpeed = 1.0f;
+    [SerializeField] float runSpeed = 5.0f;
+    [SerializeField] float jumpSpeed = 5.0f;
 
     Rigidbody2D myRigidbody;
     Animator myAnimator;
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Run();
+        Jump();
         FlipSprite();
     }
 
@@ -31,6 +33,15 @@ public class Player : MonoBehaviour
 
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
         myAnimator.SetBool("Running", playerHasHorizontalSpeed);
+    }
+
+    private void Jump()
+    {
+        if (CrossPlatformInputManager.GetButtonDown("Jump"))
+        {
+            Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
+            myRigidbody.velocity += jumpVelocityToAdd;
+        }
     }
 
     private void FlipSprite()
