@@ -2489,6 +2489,38 @@ CompositeCollider2D:
       - {x: -2.7187443, y: -2}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.000005
+--- !u!1 &1273657445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3007077376988313013, guid: 790dcac20bf53644bbefc4b17604bb97,
+    type: 3}
+  m_PrefabInstance: {fileID: 3007077378144472528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1273657446
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273657445}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03845489, y: -0.44370902}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.48529696, y: 0.11258197}
+  m_EdgeRadius: 0
 --- !u!95 &1273657449 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3007077376988313015, guid: 790dcac20bf53644bbefc4b17604bb97,
@@ -7393,6 +7425,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273657446, guid: 790dcac20bf53644bbefc4b17604bb97, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: bffb1943509d9904eb549a4ba179f1f5, type: 2}
+    - target: {fileID: 1273657446, guid: 790dcac20bf53644bbefc4b17604bb97, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0440135
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273657446, guid: 790dcac20bf53644bbefc4b17604bb97, type: 3}
+      propertyPath: m_Size.x
+      value: 0.56933784
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 790dcac20bf53644bbefc4b17604bb97, type: 3}
